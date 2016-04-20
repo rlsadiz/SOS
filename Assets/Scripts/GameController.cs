@@ -11,6 +11,9 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
+    //Public variables
+    public int boardSize;
+
     //Player Representation
     private int blueScore, redScore, score, turn;
 
@@ -19,7 +22,7 @@ public class GameController : MonoBehaviour {
 
     //Game World Representation
     private BoxCollider boardArea;
-    private int boardSize, blockCount, x, y;
+    private int blockCount, x, y;
     private String[,] blocks;
     private int[,] adjacencyMatrix;
 
@@ -68,7 +71,6 @@ public class GameController : MonoBehaviour {
         use_turn = false;
 
         //Abstract representation of the board
-        boardSize = 9;
         blockCount = 0;
         blocks = new String[boardSize, boardSize];
         adjacencyMatrix = new int[boardSize * boardSize, boardSize * boardSize];
